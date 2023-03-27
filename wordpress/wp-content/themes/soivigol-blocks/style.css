@@ -1,0 +1,149 @@
+/*
+Theme Name: Soivigol Blocks
+Theme URI: https://soivigol.dev/themes-soivigol-blocks
+Author: David Viña
+Author URI: https://davidviña.es
+Description: Blokc theme based in a dark colors. It has various patters that it is ideal to create a personal page or a portfolio web.
+Requires at least: 5.8
+Tested up to: 6.0
+Requires PHP: 5.7
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:
+Text Domain: soivigol-blocks
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
+
+Soivigol Blocks is distributed under the terms of the GNU GPL.
+*/
+
+* {
+	line-height: 1.2;
+}
+
+.alignfull {
+	margin-left: calc( 50% - ( var(--global-vw, 100vw) / 2 ));
+	margin-right: calc( 50% - ( var(--global-vw, 100vw) / 2 ));
+	max-width: 100vw;
+	width: var(--global-vw, 100vw);
+	padding-left: 0;
+	padding-right: 0;
+	clear: both;
+}
+
+/* Support to set background color secondary when hover button */
+.wp-block-button__link {
+	transition: all ease-in-out .3s;
+}
+.wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--secondary);
+}
+
+/* Adjust sizes and spaces to up image featured in single*/
+figure.soivigol-featured-single,
+div.soivigol-featured-single {
+	min-height: 20rem;
+	margin-top: -8rem;
+	position: relative;
+	z-index: 4;
+}
+
+.soivigol-backgroud-cover .wp-container-6 {
+	margin-bottom: 16rem;
+}
+
+/* Adjust item to loop query */
+.soivigol-single-item-loop {
+	box-shadow: 0px 15px 15px -10px var( --wp--preset--color--foreground );
+	min-height: 100%;
+	border-radius: 10px;
+}
+
+.soivigol-single-item-loop .wp-block-post-featured-image,
+.soivigol-box {
+	padding-bottom: 75%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.soivigol-single-item-loop .wp-block-post-featured-image img,
+.soivigol-single-item-loop .components-placeholder.block-editor-media-placeholder.has-illustration {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: unset;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    vertical-align: bottom;
+}
+
+/* Adjust post title in loop query when have a link*/
+.soivigol-single-item-loop .wp-block-post-title a {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/* Up query loop in index template */
+main.soivigol-index-query {
+	margin-top: -7rem;
+    position: relative;
+    z-index: 4;
+	padding: 1rem;
+}
+
+@media screen and ( max-width: 768px ) {
+	figure.soivigol-featured-single,
+	div.soivigol-featured-single {
+		min-height: 14rem;
+		margin-top: -7rem;
+	}
+
+	.soivigol-backgroud-cover .wp-container-6 {
+		margin-bottom: 8rem;
+	}
+}
+
+/* Global styles to forms */
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea, select {
+    -webkit-appearance: none;
+    color: var(--wp--preset--color--cyan-bluish-gray);
+    border: 1px solid var(--wp--preset--color--cyan-bluish-gray);
+    border-radius: 3px;
+    padding: 0.4em 0.5em;
+    max-width: 100%;
+    background: var(--wp--preset--color--white);
+    box-shadow: 0px 0px 0px -7px rgb(0 0 0 / 0%);
+}
+
+
+.gform_button.button {
+	background-color: var(--wp--preset--color--primary);
+    border-radius: 5px;
+    color: var(--wp--preset--color--background);
+    font-size: var(--wp--preset--font-size--medium);
+	padding: 0.5rem 1rem;
+    border: 0;
+	cursor: pointer;
+}
+
+/* Create styles to button featured to set in menu */
+.button-featured.button-featured .wp-block-navigation-item__content.wp-block-navigation-item__content {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 5px;
+	color: var(--wp--preset--color--background);
+	padding: .5em 1em;
+	transition: all ease-in-out .5;
+}
+
+.button-featured .wp-block-navigation-item__content:hover {
+	background-color: var(--wp--preset--color--secondary);
+}
+
+.soivigol-main-container {
+	margin-block-start: 0;
+}
